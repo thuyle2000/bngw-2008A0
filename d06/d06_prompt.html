@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <link rel="stylesheet" href="../css/d06.css">
+</head>
+
+<body>
+    <h2>Prompt() Demo</h2>
+    <hr>
+    <input type="button" value="Nhap nam sinh cua ban" name="btYear" id="btYear">
+    <br><br>
+    <p id="note"></p>
+
+    <script>
+        document.getElementById("btYear").onclick = function () {
+            //hien hop thoai yeu cau nhap nam sinh, luu gia tri vo bien y
+            var y = prompt("nhap nam sinh:", "2002");
+
+            if(y==null){
+                //bam nut cancel: ko cong nhan gia tri nhap.
+                document.getElementById("note").innerHTML="<i>Buon ghe !!! </i>";
+            }
+            else{
+                //chuyen y thanh so bang ham parseInt()
+                // var tuoi = 2020 - parseInt(y);
+                var tuoi = new Date().getFullYear() - parseInt(y);
+                document.getElementById("note").innerHTML="Nam nay ban " + tuoi + " roi day !";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

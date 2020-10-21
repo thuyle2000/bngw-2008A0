@@ -1,0 +1,50 @@
+/* tao class selector 'tam', 'hau', 'kien' */
+.tam{
+    padding: 3em;
+    margin: 4em;
+    color: peru;
+    /* background-color: teal; */
+    
+    border-top-color: tomato;
+    border-bottom-color:gray;
+    border-left-color: lawngreen;
+    border-right-color: lightseagreen;
+
+    border-top-style: groove;
+    border-bottom-style: double;
+    border-left-style: dotted;
+    border-right-style: dashed;
+
+    border-top-width: thick;
+    border-bottom-width: medium;
+    border-left-width: 0.2em;
+    border-right-width: thin;
+}
+
+.hau{
+    margin: 4em;
+    color: blue;
+    background-color:linen;
+
+    border-color: lightseagreen red;
+    border-style: groove dashed;
+    border-width: thick medium;
+}
+
+.kien{
+    padding: 3em;;
+    color: pink;
+    background-color:black;
+    border:yellow inset thick;
+}
+
+p{
+    text-align: justify;
+}
+
+
+.small-pic {
+    width: 30%;
+    padding: 5px;
+
+}

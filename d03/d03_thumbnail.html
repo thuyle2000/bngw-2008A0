@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumbnail</title>
+    <style>
+        .small {
+            width: 200px;
+        }
+
+        .big {
+            width: 800px;
+        }
+
+        #galary {
+            position: relative;
+            width: 450px;
+        }
+
+        #galary ul{
+            list-style-type: none;
+        }
+
+        #galary li{
+            display: inline-block;
+        }
+
+        #galary span{
+            position: absolute;
+            top: 2px;
+            left: 460px;
+            display: none;  /*khi load trang web len : hinh lon ko hien thi*/
+        }
+
+
+        #galary li:hover span{
+            display: inline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Galary</h2>
+    <hr>
+    <div id="galary">
+        <ul>
+            <li><a href="../images/halloween/halo1.png">
+                    <img src="../images/halloween/halo1_s.png" alt="" class="small">
+                    <span>
+                        <img src="../images/halloween/halo1.png" class="big" /> <br>
+                        Hinh so 1
+                    </span>
+                </a>
+            </li>
+
+            <li><a href="../images/halloween/halo2.png">
+                    <img src="../images/halloween/halo2_s.png" alt="" class="small">
+                    <span>
+                        <img src="../images/halloween/halo2.png" class="big" /> <br>
+                        Hinh so 2</span></a></li>
+
+            <li><a href="../images/halloween/halo3.png">
+                    <img src="../images/halloween/halo3_s.png" alt="" class="small">
+                    <span>
+                        <img src="../images/halloween/halo3.png" class="big" /> <br>
+                        Hinh so 3</span></a></li>
+
+            <li><a href="../images/halloween/halo4.PNG">
+                    <img src="../images/halloween/halo4_s.png" alt="" class="small"><span>
+                        <img src="../images/halloween/halo4.png" class="big" /> <br>
+                        Hinh so 4</span></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

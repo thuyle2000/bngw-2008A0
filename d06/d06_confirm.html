@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm</title>
+    <link rel="stylesheet" href="../css/d06.css">
+</head>
+<body>
+    <h2>Confirm demo</h2>
+    <hr>
+    <input type="button" value="Close Window" name="btClose" id="btClose">
+
+    <script>
+        document.getElementById("btClose").onclick=function(){
+
+            //hop thoai thong bao co 2 nut ok va cancel
+            var r = confirm("Are u sure ???");
+
+            if(r==true){
+                //neu bam nut OK, dong cua so trinh duyet/ tab hien hanh cua trang nay.
+                window.close();
+            }
+
+        }
+
+    </script>
+   
+</body>
+</html>

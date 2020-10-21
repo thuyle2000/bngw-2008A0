@@ -1,0 +1,91 @@
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.clearfix:after{
+    clear: both;
+    content: ".";
+    display: block;
+    width: 0px;
+    height: 0px;
+}
+
+.main{
+    width: 80%;
+    border: solid thin brown;
+    padding:5px;
+    margin: 0 auto;
+
+
+    /* height: auto; */
+    position: sticky;
+    bottom: 0px;
+    /* overflow: scroll; */
+
+}
+
+/* .head{
+    position: fixed;
+    width: 80%;
+} */
+
+header {
+    background-color: black;
+    color: burlywood;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    height: 80px;
+    line-height: 80px;
+
+    background-image: url("../images/halloween/halo1_s.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+}
+
+header>span {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    text-indent: 120px;
+}
+
+nav {
+    margin-top: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: tan;
+}
+
+
+nav>a {
+    padding: 10px;
+    text-decoration: none;
+    color: black
+}
+
+nav>a:hover {
+    background-color: coral;
+    color: wheat
+}
+
+section{
+    /* position: relative;
+    top: 100px; 
+    z-index: -5; */
+    /* height: auto; */
+    background-color: blanchedalmond;
+    
+}
+
+
+footer {
+    /* position: relative;
+    top: 100px; */
+
+    text-align: center;
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

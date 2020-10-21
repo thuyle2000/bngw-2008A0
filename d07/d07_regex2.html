@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+</head>
+
+<body>
+    <h2>Regular Expression demo</h2>
+    <hr>
+    <form action="" id="formDK" name="formDK">
+        <label for="">Username: </label>
+        <input type="text" name="username" id="username" value="nguyen hau" required>
+        <br> <br>
+        <label for="">Password: </label>
+        <input type="password" name="password" id="password" value="123abc" required> <br> <br>
+
+        <label for="">Phone:</label>
+        <input type="text" name="phone" id="phone" required> <br><br>
+
+        <label for="">Location: </label>
+        <input type="text" name="location" id="location" placeholder="nhap North hoac South hoac Center" required>
+        <br><br>
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        <br><br>
+        
+        <h2>Summary</h2>
+        <textarea name="summary" id="summary" cols="30" rows="10" readonly></textarea>
+
+
+    </form>
+
+    <script>
+        document.getElementById("formDK").onsubmit = function () {
+            //lay gia tri nhap trong o username
+            var user = document.getElementById("username").value;
+
+            //lay gia tri nhap trong o password
+            var pass = document.getElementById("password").value;
+
+            //lay gia tri nhap trong o phone
+            var phone = document.getElementById("phone").value;
+
+            //kiem tra phone co nhap dung dinh dang so hay ko ?
+            // var re = /^[0-9]{3,10}$/;  //mau kieu tra
+            var re = /^\d{3,10}$/;  //mau kieu tra
+            if (re.test(phone) == false) {
+                //kiem tra thay du lieu nhap ko khop voi mau
+                alert("Phone ko hop le. Vui long nhap tu 3-10 so !");
+
+                //dat con tro ve o phone
+                document.getElementById("phone").focus();
+
+                //ket thuc ham xu ly su kien
+                return false;
+            }
+
+            //lay gia tri nhap trong o location
+            var location = document.getElementById("location").value;
+
+            //kiem tra location co chua tu North | South | Center ko ?
+            
+            re = /^(North|South|Center)$/i;  //mau kieu tra
+            if (re.test(location) == false) {
+                //du lieu nhap ko khop voi mau: tb loi
+                alert("Location ko hop le. Vui long nhap North hoac South hoac Center !");
+
+                //dat con tro ve o location
+                document.getElementById("location").focus();
+
+                //ket thuc ham xu ly su kien
+                return false;
+            }
+
+            var s = `username: ${user} \n`;
+            s += `password: ${pass} \n`;
+            s += `phone: ${phone} \n`;
+            s += `location: ${location} \n`
+
+            alert(s);
+            document.getElementById("summary").innerHTML=s;
+
+
+            //vo hieu qua chuc nang chuyen trang action
+            return false;
+        }
+    </script>
+</body>
+
+</html>

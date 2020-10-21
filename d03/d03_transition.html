@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            left: 10px;
+            top:10px;
+            width: 100px;
+            height: 100px;
+            background-color:palevioletred;
+            transition-duration: 5s;
+            transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+        }
+
+        div:hover{
+            width: 100px;
+            height: 100px;
+            position: relative;;
+            left: 200px;
+            top:10px;
+            
+            border-radius: 50px;
+            background-color: lightgreen;
+            transform: rotate(270deg);
+        }
+
+        p{
+            position: absolute;
+            top: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+
+            transition-duration: 4s;
+            
+        }
+        p:hover{
+            top: 5px;
+            left: 400px;
+            font-size: 5em;
+            color: tomato;
+        }
+
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+    </style>
+</head>
+<body>
+    <h2>Transition demo</h2>
+    <hr>
+
+    <div>abc</div>
+
+    <br><br>
+    <p>Hi, I'm WOWY ANGLES !!! </p>
+</body>
+</html>

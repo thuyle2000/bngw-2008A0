@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <link rel="stylesheet" href="../css/d04.css">
+
+    <style>
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: brown;
+            transition-duration: 5s;
+        }
+
+
+        p:hover {
+            color: green;
+            font-weight: bold;
+            font-size: 3rem;
+            text-shadow: 3px 3px 3px gray;
+        }
+
+        #phuc {
+            width: 100px;
+            height: 100px;
+            background-color: peachpuff;
+            text-align: center;
+            transition-duration: 2s;
+            transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        }
+
+        #phuc:hover {
+            border-radius: 50px;
+            color: burlywood;
+            background-color: blue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transform: rotate(360deg);
+        }
+
+        h3 {
+            padding-top: 40%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- vung header chua logo/banner -->
+        <header>
+            <img src="../images/halloween/halo6_s.png" style="width: 100px;" alt="">
+            <span> Halloween ...</span>
+        </header>
+
+        <!-- vung menu -->
+        <nav id="menu">
+            <a href="d04_home.html">Home</a>
+            <a href="d04_animate.html">Animate</a>
+            <a href="d04_transition.html">Transition</a>
+            <a href="d04_imageMap.html">Image Map</a>
+            <a href="">About us</a>
+        </nav>
+
+        <!-- vung noi dung chinh  -->
+        <section>
+            <h2>
+                Transition Demo
+            </h2>
+            <hr>
+        
+            <div>
+                <p>
+                    Hi, I'm WOWY Angles !!!
+                </p>
+            </div>
+        
+            <br><br>
+        
+            <div id="phuc">
+                <h3>Hello</h3>
+            </div>            
+
+
+        </section>
+
+        <!-- vung tieu de chan : tt ban quyen copyright -->
+        <footer>
+            copyright &copy; by Thinh Ltd, 2020
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    
+
+</body>
+
+</html>

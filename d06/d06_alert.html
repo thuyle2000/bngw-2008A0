@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <link rel="stylesheet" href="../css/d06.css">
+
+</head>
+
+<body>
+    <div>
+        <h2>Sign-in</h2>
+        <form action="d06_audio.html" name="formLogin" id="formLogin" method="GET">
+            <label for="">Input your email</label> <br>
+            <input type="email" name="mail" id="mail" required 
+            placeholder="nhap dia chi email"
+            value="thang@gmail.com" >
+            <br><br>
+
+            <label for="">Input your password</label> <br>
+            <input type="password" name="password" id="password" required placeholder="nhap mat khau" value="123">
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">           
+        </form>
+    </div>
+
+    <script>
+        // lap trinh cho su kien (event) bam nut [submit]
+        document.getElementById("formLogin").onsubmit=function(){
+
+            //lay noi dung cua o nhap email, cat vo bien x
+            var x = document.getElementById("mail").value;
+
+            //lay password nhap trong form, cat vo bien y
+            var y = document.getElementById("password").value;
+
+            alert("Hello, " + x +"\n Your password is "+ y);
+
+            //VO HIEU HOA TINH NANG CHUYEN TRANG [d06_audio.html] CUA THUOC TINH ACTION
+            return false;
+
+        }
+       
+     </script>
+
+</body>
+</html>
