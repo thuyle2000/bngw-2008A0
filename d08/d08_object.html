@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <link rel="stylesheet" href="../css/d08.css">
+</head>
+<body>
+    <h2>Object Demo</h2>
+    <hr>
+    <input type="button" value="click me" 
+    id="btOK" name="btOK">
+
+    <script>
+
+        //lap trinh cho su kien click tren button [click me]
+        document.getElementById('btOK').onclick= function(){
+            //tao 1 doi tuong sinh vien
+            var sv = new Student('Bao Long', 17);
+            sv.display();
+        }
+
+
+        //tao 1 doi tuong mau (template) SinhVien
+        function Student(name, age){
+            this.name = name;
+            this.age = age;
+            this.display = function(){
+                var s = `Hi, ${name} \n`;
+                s += `You are ${age} year-old ? `;
+
+                alert(s);
+            }
+        }
+
+    </script>
+</body>
+</html>

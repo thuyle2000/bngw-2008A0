@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-on</title>
+    <link rel="stylesheet" href="../css/d07.css">
+</head>
+<body>
+    <h2>Sign-on</h2>
+    <hr>
+    <form action="" name="formDK" id="formDK">
+        <label for="">Username: </label>
+        <input type="text" name="user" id="user" value="hau dau" required> <br><br>
+
+        <label for="">password</label>
+        <input type="password" name="password" id="password" value="123" required> <br> <br>
+
+        <label for="">email</label>
+        <input type="email" name="email" id="email" value="hau@gmail.com" required> <br> <br>
+
+        <label for="">location</label>
+        <select name="location" id="location">
+            <option value="SG">Saigon</option>
+            <option value="HN">Hanoi</option>
+            <option value="HU">Hue</option>
+            <option value="DN">Danang</option>
+        </select> <br> <br>
+
+        <label for="">gender</label>
+        <input type="radio" name="gender" id="genMale" checked value="Nam"> Male 
+        <input type="radio" name="gender" id="genFemale"  value="Nu"> Female <br> <br>
+        
+        <label for="">Birthday</label>
+        <input type="date" name="dob" id="dob" 
+        value="2002-08-15" required> <br> <br>
+
+        <label for="">Languages</label>
+        <input type="checkbox" name="lan" id="lanVN" checked value="VN"> VN - 
+        <input type="checkbox" name="lan" id="lanEN" checked value="EN"> EN -
+        <input type="checkbox" name="lan" id="lanJP" value="JP" > JP 
+        <input type="checkbox" name="lan" id="lanCH" value="CH" > CH 
+        <br> <br>
+
+        <label for="">Level</label>
+        <input type="number" name="level" id="level" required min="1" max="10" value="5">
+        <br> <br>
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+
+        <br><br>
+        <label for="">Summary</label>
+        <br>
+        <textarea name="summary" id="summary" cols="40" rows="10" readonly></textarea>
+
+    </form>
+
+    <script>
+        document.getElementById("formDK").onsubmit = function(){
+            //lay du lieu nhap tren form
+            var user = document.getElementById("user").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var level = document.getElementById("level").value;
+
+            var location = document.getElementById("location").value;
+
+            var gender = document.querySelector("input[name='gender']:checked").value;
+
+            var dob = document.getElementById("dob").value;
+
+            var age = new Date().getFullYear()-
+            (new Date(dob)).getFullYear();
+
+            var lan = Array.from(document.querySelectorAll("input[type=checkbox][name=lan]:checked")).map(e => e.value);
+
+            //dua het vo mang a
+            var a = [];
+            a.push(`username: ${user}`);
+            a.push(`password: ${password}`);
+            a.push(`email: ${email}`);
+            a.push(`level: ${level}`);
+            a.push(`location: ${location}`);
+            a.push(`gender: ${gender}`);
+            a.push(`birthday: ${dob}`);
+            a.push(`age: ${age}`);
+            a.push(`languages: ${lan.join(', ')}`);
+
+            //chuyen mang a -> chuoi, moi phan tu cach nhau boi ky hieu '\n'
+            var s = a.join('\n');
+            //alert(s);
+
+            document.getElementById("summary").innerHTML=s;
+
+            return false;
+
+        }
+    </script>
+</body>
+</html>

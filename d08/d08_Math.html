@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+    <link rel="stylesheet" href="../css/d08.css">
+</head>
+
+<body>
+    <h2>Math Demo</h2>
+    <hr>
+    <form action="" method="get" id="formGame" name="formGame">
+        <label for="">Input number [1-6]</label>
+        <input type="number" name="num" id="num" value="1" min="1" max="6" required> 
+        <br><br>
+
+        <input type="submit" value="check">
+        <br><br>
+
+        <label for="">Win</label>
+        <input type="number" name="win" id="win" value="0" readonly required>
+        <br>
+        <label for="">Lose</label>
+        <input type="number" name="lose" id="lose" value="0" readonly required>
+        <br>
+
+    </form>
+
+    <script>
+        document.getElementById("formGame").onsubmit= function(){
+            //lay con so nhap trong o input
+            var n = document.getElementById("num").value;
+
+            //tao 1 so ngau nhien tu 1-6
+            var r = Math.round(1+ Math.random()*5);
+
+            //kiem tra
+            if(r==n){
+                alert("Congratuation !!!");
+                document.getElementById("win").value++;
+            }
+            else{
+                alert(`Poor for u !!! \nCorrect number is ${r} !`);
+                document.getElementById("lose").value++;               
+            }
+
+            // vo hieu hoa chuc nang chuyen trang action
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

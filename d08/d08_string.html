@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <link rel="stylesheet" href="../css/d08.css">
+</head>
+
+<body>
+    <h2>String Demo</h2>
+    <hr>
+    <form action="" method="get" id="formString" name="formString">
+
+        <label for="">Nhap ho va ten</label>
+        <input type="text" name="fullname" id="fullname" required value="Long Nguyen Bao">
+        <br><br>
+
+        <input type="submit" value="check" id="btOK" name="btOK">
+
+    </form>
+
+    <div id="summary">
+
+    </div>
+
+    <script>
+        document.getElementById("formString").onsubmit = function () {
+
+            //lay chuoi nhap trong o ho ten
+            var s = document.getElementById("fullname").value;
+
+            //doi thanh doi tuong String
+            var name = new String(s);
+
+            //tao bien mang a[]
+            var a = [];
+
+            // chuyen chu in hoa
+            a.push(name.toUpperCase());
+            // chuyen chu in thuong
+            a.push(name.toLowerCase());
+
+
+            //chia chuoi name thanh cac chuoi con, luu trong bien mang s 
+            s = name.split(" ");
+            //lay ten
+            a.push(s[0]);
+
+            //trich chuoi con de lay phan ho va ten lot
+            var i = name.indexOf(' '); // tra ve vi tri cua khoang trang dau tien
+            a.push(name.substring(i));
+
+            //tim tat ca chu o doi thanh chu a
+            a.push(name.replace(/o/g, 'a'));
+            
+            
+
+
+            //dua gia tri cua a -> khoi summary
+            document.getElementById("summary").innerHTML = a.join("<br>");
+
+            //vo hieu hoa chuc nang chuyen trang action
+            return false;
+        }
+    </script>
+</body>
+
+</html>

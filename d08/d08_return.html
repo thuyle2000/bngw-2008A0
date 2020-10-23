@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return</title>
+    <link rel="stylesheet" href="../css/d08.css">
+</head>
+<body>
+    <h2>Return Value Demo</h2>
+    <hr>
+    <label for="">Input a number: </label>
+    <input type="number" name="num" id="num" value="5">
+    <br><br>
+    <input type="button" value="Factorial" id="btOK" name="btOK">
+    <input type="number" name="result" id="result" readonly>
+
+
+    <script>
+
+        //lap trinh cho su kien click button [factorial]
+        document.getElementById("btOK").onclick=function(){
+            //lay so nguyen nhap trong o input number
+            var x = parseInt(document.getElementById("num").value);
+
+            //goi ham tinh giai thua cua so x va luu ket qua tra ve vo bien r
+            var r = GiaiThua(x);
+
+            //gan gia tri cua r vo o nhap ket qua
+            document.getElementById("result").value=r;
+
+
+        }
+
+        //ham tinh giai thua cua so nguyen N
+        function GiaiThua(n){
+            if(n<=1){
+                return 1;
+            }
+
+            var kq = 1;
+            for(var i=2; i<=n; i++){
+                kq *= i;
+            }
+            return kq;
+        }
+    </script>
+</body>
+</html>
